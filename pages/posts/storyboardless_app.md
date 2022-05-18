@@ -12,8 +12,4 @@ There are many complexities associated with Xcode projects. One that plagued me 
 
 I struggled greatly when removing the `Main.storyboard` file from my initial projects. I had no idea where to look when my builds failed. Recently, I found an excellent guide on how to properly remove all references to the `Main.storyboard` file within a new project. I'm embedding it within this post for quick access.
 
-import { Gist } from '@blocks/kit'
-
-<Gist id="6c9c40e862943e52f3bcea3f9a96d719" />
-
 <script src="https://gist.github.com/daltonturner/6c9c40e862943e52f3bcea3f9a96d719.js"></script>
