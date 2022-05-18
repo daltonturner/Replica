@@ -12,4 +12,29 @@ There are many complexities associated with Xcode projects. One that plagued me 
 
 I struggled greatly when removing the `Main.storyboard` file from my initial projects. I had no idea where to look when my builds failed. Recently, I found an excellent guide on how to properly remove all references to the `Main.storyboard` file within a new project. I'm embedding it within this post for quick access.
 
-<script src="https://gist.github.com/daltonturner/6c9c40e862943e52f3bcea3f9a96d719.js"></script>
+1. Remove `Main.storyboard` file from the bundle.
+2. Remove `main` from *Target/General/Main Interface*
+3. Remove `Main` from `Info.plist` at `Application Scene Manifest/Scene Configuration/Application Session Role/Default Configuration`.
+4. Instantiate `window` with first view controller in `SceneDelegate`.
+
+Replace this method.
+```Swift
+func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
+    // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
+    // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
+    // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
+    guard let _ = (scene as? UIWindowScene) else { return }
+}
+```
+
+With this.
+```Swift
+func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
+    if let windowScene = scene as? UIWindowScene {
+        let window = UIWindow(windowScene: windowScene)
+        window.rootViewController = ViewController()
+        self.window = window
+        window.makeKeyAndVisible()
+    }
+}
+```
