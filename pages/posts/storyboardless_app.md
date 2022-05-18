@@ -10,7 +10,7 @@ author: Dalton
 
 There are many complexities associated with Xcode projects. One that plagued me at the onset of my Swift and iOS development journey was the Storyboard. After I finally understood what storyboards do, I decided I preferred a "storyboardless" workflow. Programmatically developing views and transitions seemed like a better way for me to more deeply understand iOS development. 
 
-I struggled greatly when removing the `Main.storyboard` file from my initial projects. I had no idea where to look when my builds failed. Recently, I found an excellent guide on how to properly remove all references to the `Main.storyboard` file within a new project. I'm embedding it within this post for quick access.
+I struggled greatly when removing the `Main.storyboard` file from my initial projects. I had no idea where to look when my builds failed. Recently, I found an excellent guide on how to properly remove all references to the `Main.storyboard` file within a new project. I'm adding the instructions here for quick reference. 
 
 1. Remove `Main.storyboard` file from the bundle.
 2. Remove `main` from *Target/General/Main Interface*
