@@ -3,6 +3,12 @@ import Head from 'next/head'
 
 import '../styles/main.css'
 
+import Prism from 'prism-react-renderer/prism'
+(typeof global !== "undefined" ? global : window).Prism = Prism
+require("prismjs/components/prism-kotlin")
+require("prismjs/components/prism-csharp")
+require("prismjs/components/prism-swift")
+
 export default function Nextra({ Component, pageProps }) {
   return (
     <>

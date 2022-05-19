@@ -18,7 +18,7 @@ I struggled greatly when removing the `Main.storyboard` file from my initial pro
 4. Instantiate `window` with first view controller in `SceneDelegate`.
 
 Replace this method:
-```Swift
+```kotlin
 func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
     // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
     // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
@@ -28,7 +28,7 @@ func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options conn
 ```
 
 With this:
-```Swift
+```kotlin
 func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
     if let windowScene = scene as? UIWindowScene {
         let window = UIWindow(windowScene: windowScene)
