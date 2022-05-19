@@ -6,7 +6,7 @@ import Prism from 'prism-react-renderer/prism'
 
 (typeof global !== "undefined" ? global : window).Prism = Prism
 
-require("prismjs/components/prism-swift")
+require("prism/components/prism-swift")
 
 export default function Nextra({ Component, pageProps }) {
   return (
