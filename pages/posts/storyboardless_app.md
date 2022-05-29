@@ -1,16 +1,16 @@
 ---
-title: Storyboardless iOS Apps 
+title: Removing Storyboards for Programmatic Development 
 date: 2022/5/17
 description: The Difinitive Guide
 tag: Swift, Xcode
 author: Dalton
 ---
 
-# Storyboardless iOS App
+# Storyboardless Apps
 
 There are many complexities associated with Xcode projects. One that plagued me at the onset of my Swift and iOS development journey was the Storyboard. After I finally understood what storyboards do, I decided I preferred a "storyboardless" workflow. Programmatically developing views and transitions seemed like a better way for me to more deeply understand iOS development. 
 
-I struggled greatly when removing the `Main.storyboard` file from my initial projects. I had no idea where to look when my builds failed. Recently, I found an excellent [guide](https://gist.github.com/Geri-Borbas/9f4fa0a9ab6552151bdf408729a4cd11) on how to properly remove all references to the `Main.storyboard` file within a new project. I'm adding the instructions here for quick reference. 
+I struggled when removing the `Main.storyboard` file from my initial projects. I had no idea where to look when my builds failed. Recently, I found an excellent [guide](https://pavankataria.medium.com/how-to-programmatically-setup-your-app-with-scene-delegate-in-swift-b0aab1949b) on how to properly remove all references to the `Main.storyboard` file within a new project. I'm adding the instructions here for quick reference. 
 
 1. Remove `Main.storyboard` file from the bundle.
 2. Remove `main` from *Target/General/Main Interface*
@@ -30,11 +30,21 @@ func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options conn
 With this:
 ```swift
 func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-    if let windowScene = scene as? UIWindowScene {
-        let window = UIWindow(windowScene: windowScene)
-        window.rootViewController = ViewController()
-        self.window = window
-        window.makeKeyAndVisible()
-    }
+    /// 1. Capture the scene
+    guard let windowScene = (scene as? UIWindowScene) else { return }
+
+    /// 2. Create a new UIWindow using the windowScene constructor which takes in a window scene.
+    let window = UIWindow(windowScene: windowScene)
+
+    /// 3. Create a view hierarchy programmatically
+    let viewController = ArticleListViewController()
+    let navigation = UINavigationController(rootViewController: viewController)
+
+    /// 4. Set the root view controller of the window with your view controller
+    window.rootViewController = navigation
+
+    /// 5. Set the window and call makeKeyAndVisible()
+    self.window = window
+    window.makeKeyAndVisible()
 }
 ```
