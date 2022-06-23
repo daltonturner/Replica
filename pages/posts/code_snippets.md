@@ -10,7 +10,7 @@ author: Dalton
 
 I recently learned about a cool feature in Xcode — Code Snippets. These snippets work in much the same way a [GitHub Gist](https://gist.github.com/discover) does. It allows you to write some boilerplate code and save it in your instance of Xcode for reuse later. It’s a straightforward concept that can be a powerful time saving tool. 
 
-Here’s how to create one (Xcode version): 
+Here’s how to create one: 
 
 1. Type out the code you want to turn into a snippet
 2. Select the code and right click 
@@ -25,10 +25,11 @@ In learning about this concept, I did some research and linked a couple of usefu
 1. [How to create a code snippet in Xcode](https://sarunw.com/posts/how-to-create-code-snippets-in-xcode/#what-is-code-snippet%3F)
 2. [Helpful iOS and Xcode Code Snippets](https://betterprogramming.pub/helpful-code-snippets-for-ios-21aa5ef894de)
 
-Additionally, I’m adding some of my favorite snippets to this post. 
+Additionally, I’m adding some of my favorite snippets to this post!
+
+## Snippets 
 
 Creating a Storyboardless application in Xcode is something I’ve posted about before (link). Naturally, this snippet for a Storyboardless AppDelegate made a lot of sense to save in my instance of Xcode: 
-
 ```swift
 var window: UIWindow?
 
@@ -43,7 +44,6 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 ```
 
 Boilerplate definitions for UIKit Views are always a hassle to write out, so here’s a snippet for that: 
-
 ```swift
 import Foundation
 import UIKit
@@ -74,9 +74,11 @@ extension NewView {
 }
 ```
 
-Activate Constraints Array
+Activate Constraints Array:
 ```swift
 NSLayoutConstraint.activate([
 
 ])
 ```
+
+Hopefully you find this informative and useful! 
