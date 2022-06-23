@@ -6,8 +6,6 @@ tag: Swift, Xcode
 author: Dalton
 ---
 
-import Callout from 'nextra-theme-docs/callout'
-
 # Swift Code Snippets with GPT-3
 
 This post is my first experiment with OpenAI’s [GPT-3](https://openai.com/api/). GPT-3 has been on my radar for several years, but I didn’t pay much attention and didn’t initially sign up for their beta program. Some of my favorite Twitter follows, [Jordan Singer]() and [Simon Willison]() have raved about its abilities, and have even created [products]() using the service. Some tweets and the recent monetization of [GitHub’s Copilot](https://github.com/features/copilot/) feature recently reminded of GPT-3, so I decided to sign up and give it a whirl.
