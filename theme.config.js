@@ -8,24 +8,18 @@ export default {
         Twitter
       </a>{" "}
       ·{" "}
-      <a href="https://GitHub.com/daltonturner" target="_blank">
-          GitHub
+      <a href="https://github.com/daltonturner" target="_blank">
+        GitHub
       </a>
-      <small style={{ display: 'block', marginTop: '8rem' }}>
-        <time>{YEAR}</time> © Dalton Turner.
+      <small style={{ display: "block", marginTop: "8rem" }}>
+        <time>{YEAR}</time> © Shu Ding.
         <a href="/feed.xml">RSS</a>
         <style jsx>{`
           a {
             float: right;
           }
-          @media screen and (max-width: 480px) {
-            article {
-              padding-top: 2rem;
-              padding-bottom: 4rem;
-            }
-          }
         `}</style>
       </small>
-    <div>
-  )
+    </div>
+  ),
 }
