@@ -14,11 +14,11 @@ I am learning Swift, and wanted to test providing GPT-3 some prompts to generate
 
 I wanted to write up some instructions on how to accomplish this so others could take advantage of the API, but thought to myself, “What if I prompted GPT-3 to help me write the post?” So... I decided to get a little bit meta and have GPT-3 write the rest of this post for me! What you’re seeing below is only *slightly* edited output from the _first_ prompt I provided.
 
-<Callout emoji="📄">
-**The Prompt I Provided GPT-3:**
 
-Write a blog article that goes into detail about how to use GPT-3 to create several time-saving Swift Code Snippets that a developer should save in Xcode. The post should be written using markdown formatting and include several sections: an introduction, a section on how to get set up with OpenAI, a section on writing a good prompt for Swift code snippets, and a conclusion summarizing the post.
-</Callout>
+> **The Prompt I Provided GPT-3:**
+> 
+> Write a blog article that goes into detail about how to use GPT-3 to create several time-saving Swift Code Snippets that a developer should save in Xcode. The post should be written using markdown formatting and include several sections: an introduction, a section on how to get set up with OpenAI, a section on writing a good prompt for Swift code snippets, and a conclusion summarizing the post.
+>
 
 ## Swift Code Snippets with GPT-3
 
