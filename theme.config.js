@@ -12,7 +12,7 @@ export default {
         GitHub
       </a>
       <small style={{ display: "block", marginTop: "8rem" }}>
-        <time>{YEAR}</time> © Shu Ding.
+        <time>{YEAR}</time> © Dalton Turner.
         <a href="/feed.xml">RSS</a>
         <style jsx>{`
           a {
