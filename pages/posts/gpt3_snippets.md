@@ -1,6 +1,6 @@
 ---
 title: Swift Code Snippets with GPT-3
-date: 2022/6/22
+date: 2022/6/23
 description: Improve development efficency
 tag: Swift, Xcode
 author: Dalton
@@ -8,14 +8,12 @@ author: Dalton
 
 # Swift Code Snippets with GPT-3
 
-This post is my first experiment with OpenAI’s [GPT-3](https://openai.com/api/). GPT-3 has been on my radar for several years, but I didn’t pay much attention and didn’t initially sign up for their beta program. Some of my favorite Twitter follows, [Jordan Singer]() and [Simon Willison]() have raved about its abilities, and have even created [products]() using the service. Some tweets and the recent monetization of [GitHub’s Copilot](https://github.com/features/copilot/) feature recently reminded of GPT-3, so I decided to sign up and give it a whirl.
+This post is my first experiment with OpenAI’s [GPT-3](https://openai.com/api/). GPT-3 has been on my radar for several years, but I didn’t pay much attention and didn’t initially sign up for their beta program. Some of my favorite Twitter follows, [Jordan Singer](https://twitter.com/jsngr) and [Simon Willison](https://twitter.com/simonw) have raved about its abilities, and have even created [products](https://diagram.com/) using the service. Some tweets and the recent monetization of [GitHub’s Copilot](https://github.com/features/copilot/) feature recently reminded of GPT-3, so I decided to sign up and give it a whirl.
 
 I am learning Swift, and wanted to test providing GPT-3 some prompts to generate code snippets for me. I figured these snippets could be useful to save to Xcode for future use. The results were really cool and really useful.
 
 I wanted to write up some instructions on how to accomplish this so others could take advantage of the API, but thought to myself, “What if I prompted GPT-3 to help me write the post?” So... I decided to get a little bit meta and have GPT-3 write the rest of this post for me! What you’re seeing below is only *slightly* edited output from the _first_ prompt I provided.
 
-
-> **The Prompt I Provided GPT-3:**
 > 
 > Write a blog article that goes into detail about how to use GPT-3 to create several time-saving Swift Code Snippets that a developer should save in Xcode. The post should be written using markdown formatting and include several sections: an introduction, a section on how to get set up with OpenAI, a section on writing a good prompt for Swift code snippets, and a conclusion summarizing the post.
 >
