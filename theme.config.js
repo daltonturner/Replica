@@ -4,12 +4,12 @@ export default {
   footer: (
     <div>
       <hr />
-      <a href="https://twitter.com/shuding_" target="_blank">
+      <a href="https://twitter.com/dangerdalt" target="_blank">
         Twitter
       </a>{" "}
       ·{" "}
-      <a href="https://github.com/shuding" target="_blank">
-        GitHub
+      <a href="https://GitHub.com/daltonturner" target="_blank">
+          GitHub
       </a>
       <small style={{ display: 'block', marginTop: '8rem' }}>
         <time>{YEAR}</time> © Dalton Turner.
@@ -27,5 +27,5 @@ export default {
         `}</style>
       </small>
     <div>
-  ),
+  )
 }
