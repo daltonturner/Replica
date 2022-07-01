@@ -2,7 +2,6 @@
 type: page
 title: Projects
 date: 2020-07-01
-description: Some of my favorite work.
 ---
 
 # Projects
