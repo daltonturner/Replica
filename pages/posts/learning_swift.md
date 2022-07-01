@@ -12,4 +12,9 @@ A few weeks back I joined Cash App as a Software Engineering Apprentice. The goa
 
 This is a pretty unique opportunity, so I figured I'd document my progress by working on some side projects. I might mix in some other fun stuff I learn along the way, and share that all here too.
 
+Check out these links to keep up on any posts regarding Swift or Xcode:
+
+* [daltonturner.xyz/tags/Swift](https://daltonturner.xyz/tags/Swift)
+* [daltonturner.xyz/tags/Xcode](https://daltonturner.xyz/tags/Xcode)
+
 Wish me luck! 
