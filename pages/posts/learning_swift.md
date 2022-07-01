@@ -2,7 +2,7 @@
 title: Learning Swift
 date: 2022/3/18
 description: The basics
-tag: swift
+tag: Swift
 author: Dalton
 ---
 
