@@ -1,7 +1,7 @@
 ---
 title: Networking in Swift Playgrounds with Datasette
 date: 2022/7/01
-description: How to create and use your own endpoint!
+description: How to create and use your own API endpoint!
 tag: Swift, Xcode
 author: Dalton
 ---
