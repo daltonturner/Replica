@@ -4,7 +4,7 @@ export default function Document() {
   const meta = {
     title: 'Replica',
     description: 'Thoughts, Projects, Ideas',
-    image: 'https://github.com/daltonturner/Replica/blob/main/public/images/blobbyThumbnail.png'
+    image: 'https://github.com/daltonturner/Replica/blob/88b30eff0d34b42aec272539755b2126889808f0/public/images/blobbyThumbnail.png'
   }
 
   return (
