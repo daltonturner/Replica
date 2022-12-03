@@ -29,7 +29,7 @@ Additionally, I’m adding some of my favorite snippets to this post!
 
 ## Snippets 
 
-Creating a Storyboardless application in Xcode is something I’ve posted about before (link). Naturally, this snippet for a Storyboardless AppDelegate made a lot of sense to save in my instance of Xcode: 
+Creating a Storyboardless application in Xcode is something I’ve posted about [before](https://daltonturner.xyz/posts/storyboardless_app). Naturally, this snippet for a Storyboardless AppDelegate made a lot of sense to save in my instance of Xcode: 
 ```swift
 var window: UIWindow?
 
