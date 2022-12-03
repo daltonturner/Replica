@@ -56,10 +56,6 @@ img.next-image {
   margin: 0;
 }
 
-.image-column > div {
-  margin: 0 auto;
-}
-
 .prose a {
   color: #0074de;
 }
