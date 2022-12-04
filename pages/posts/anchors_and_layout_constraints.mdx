@@ -33,6 +33,7 @@ To use layout guides in your app, you can access them through the `UIViewControl
 ### Safe Area Layout Guide
 
 Here is an example of some Swift code that uses the safe area layout guide to position a user interface element:
+
 ```swift
 // Get a reference to the view controller's view
 let view = self.view
@@ -57,6 +58,7 @@ This code creates a button and positions it using the safe area layout guide. Th
 ### Readable Content
 
 Here is an example that uses the readable content guide to position a user interface element:
+
 ```swift
 // Get a reference to the view controller's view
 let view = self.view
@@ -81,10 +83,10 @@ This code creates a label and positions it using the readable content guide. The
 ## Gotchas
 
 - Set `translatesAutoresizingMaskIntoConstraints = false` on every view
-     - `translatesAutoresizingMaskIntoConstraints` determines whether the element's autoresizingMask property is used to calculate its position and size, or whether the constraints defined in your Auto Layout constraints are used instead.
+- `translatesAutoresizingMaskIntoConstraints` determines whether the element's autoresizingMask property is used to calculate its position and size, or whether the constraints defined in your Auto Layout constraints are used instead.
 
 - Ensure all constraints are active i.e. `.isActive = true`
-     - You can pass an array of constraints to the NSLayoutConstraint.activate(_:) method. This is a concise way to activate multiple constraints, and it can make your code easier to read and maintain.
+- You can pass an array of constraints to the NSLayoutConstraint.activate(_:) method. This is a concise way to activate multiple constraints, and it can make your code easier to read and maintain.
 
 - Add your subviews to the the view i.e. `addSubview(thumbnailImageView)`
-     - Adding a user interface element as a subview of a view creates a hierarchical relationship between the element and the view. This allows the element to inherit the constraints defined on the view, as well as any layout margins or other layout properties that are defined on the view.
+- Adding a user interface element as a subview of a view creates a hierarchical relationship between the element and the view. This allows the element to inherit the constraints defined on the view, as well as any layout margins or other layout properties that are defined on the view.
