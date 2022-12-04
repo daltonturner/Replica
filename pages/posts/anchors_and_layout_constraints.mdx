@@ -91,6 +91,6 @@ This code creates a label and positions it using the readable content guide. The
 - Set `translatesAutoresizingMaskIntoConstraints = false` on every view
     - `translatesAutoresizingMaskIntoConstraints` determines whether the element's autoresizingMask property is used to calculate its position and size, or whether the constraints defined in your Auto Layout constraints are used instead.
 - Ensure all constraints are active i.e. `.isActive = true`
-    - You can pass an array of constraints to the NSLayoutConstraint.activate(_:) method. This is a concise way to activate multiple constraints, and it can make your code easier to read and maintain.
+    - You can pass an array of constraints to the `NSLayoutConstraint.activate(_:)` method. This is a concise way to activate multiple constraints, and it can make your code easier to read and maintain.
 - Add your subviews to the the view i.e. `addSubview(thumbnailImageView)`
     - Adding a user interface element as a subview of a view creates a hierarchical relationship between the element and the view. This allows the element to inherit the constraints defined on the view, as well as any layout margins or other layout properties that are defined on the view.
