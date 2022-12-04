@@ -1,0 +1,96 @@
+---
+title: Anchors and Layout Guides
+date: 2022/12/3
+description: Programmatic Constraints
+tag: Auto Layout
+author: Dalton
+---
+
+# Anchors
+
+Anchors are a key concept in Auto Layout. They are references to specific points on a user interface element, such as its edges or center, that can be used to position the element relative to other elements on the screen. You can use them to specify the width, height, and position of a view relative to another view or the superview. Anchors allow you to create constraints programmatically without having to use the Interface Builder.
+
+For example, you might use anchors to pin the leading edge of one element to the trailing edge of another, so that they always maintain a fixed distance from one another. This allows you to create user interfaces that are flexible and adaptable to different screen sizes and orientations.
+
+To create an anchor constraint, you need to specify the view that you want to constrain, the attribute that you want to constrain, and the relationship between the attribute and the value. For example, let's say you want to constrain a view so that it's 10 points from the top of the superview. You would write the following code:
+
+```swift
+view.topAnchor.constraint(equalTo: superview.topAnchor, constant: 10)
+```
+
+This code creates a top anchor on the view and constrains it to the top anchor of the superview with a constant of 10. The constant is the distance between the two anchors.
+
+## Layout Guides
+
+Layout guides are an important concept in the Auto Layout system. They are invisible objects that provide a reference point for positioning user interface elements on the screen.
+
+There are two types of layout guides in UIKit: the safe area layout guide and the readable content guide. The safe area layout guide represents the portion of the screen that is safe to use for placing user interface elements, taking into account the presence of items like the status bar, navigation bar, and tab bar. The readable content guide represents the area of the screen where text can be comfortably read without interference from other elements.
+
+Layout guides are useful for defining the layout of your user interface in a way that is flexible and adaptable to different screen sizes and orientations. For example, you might use the safe area layout guide to ensure that your user interface elements are not obscured by the device's status bar or other system elements.
+
+To use layout guides in your app, you can access them through the `UIViewController` object, which provides properties like `view.safeAreaLayoutGuide` and `view.readableContentGuide` that you can use in your Auto Layout constraints. This allows you to position your user interface elements relative to these guides, so that they are automatically adjusted as the screen size or orientation changes.
+
+Expand these sections to take a look at a few examples:
+
+<details>
+    <summary><b>Safe Area Layout Guide</b></summary>
+
+Here is an example of some Swift code that uses the safe area layout guide to position a user interface element:
+
+```swift
+// Get a reference to the view controller's view
+let view = self.view
+
+// Create a button and add it to the view
+let button = UIButton(type: .system)
+button.setTitle("Button", for: .normal)
+view.addSubview(button)
+
+// Use the safe area layout guide to position the button
+button.translatesAutoresizingMaskIntoConstraints = false
+NSLayoutConstraint.activate([
+    button.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+    button.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+    button.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+    button.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
+])
+```
+
+This code creates a button and positions it using the safe area layout guide. The button is anchored to the leading, trailing, top, and bottom edges of the safe area layout guide, so it will always be positioned within the safe area of the screen.
+</details>
+
+<details>
+    <summary><b>Readable Content</b></summary>
+
+Here is an example that uses the readable content guide to position a user interface element:
+
+```swift
+// Get a reference to the view controller's view
+let view = self.view
+
+// Create a label and add it to the view
+let label = UILabel()
+label.text = "Label"
+view.addSubview(label)
+
+// Use the readable content guide to position the label
+label.translatesAutoresizingMaskIntoConstraints = false
+NSLayoutConstraint.activate([
+    label.leadingAnchor.constraint(equalTo: view.readableContentGuide.leadingAnchor),
+    label.trailingAnchor.constraint(equalTo: view.readableContentGuide.trailingAnchor),
+    label.topAnchor.constraint(equalTo: view.readableContentGuide.topAnchor),
+    label.bottomAnchor.constraint(equalTo: view.readableContentGuide.bottomAnchor)
+])
+```
+
+This code creates a label and positions it using the readable content guide. The label is anchored to the leading, trailing, top, and bottom edges of the readable content guide, so it will always be positioned within the area of the screen where text can be comfortably read.
+</details>
+
+## Gotchas
+
+- Set `translatesAutoresizingMaskIntoConstraints = false` on every view
+    - `translatesAutoresizingMaskIntoConstraints` determines whether the element's autoresizingMask property is used to calculate its position and size, or whether the constraints defined in your Auto Layout constraints are used instead.
+- Ensure all constraints are active i.e. `.isActive = true`
+    - You can pass an array of constraints to the `NSLayoutConstraint.activate(_:)` method. This is a concise way to activate multiple constraints, and it can make your code easier to read and maintain.
+- Add your subviews to the the view i.e. `addSubview(thumbnailImageView)`
+    - Adding a user interface element as a subview of a view creates a hierarchical relationship between the element and the view. This allows the element to inherit the constraints defined on the view, as well as any layout margins or other layout properties that are defined on the view.
