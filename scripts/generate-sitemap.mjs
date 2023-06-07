@@ -22,7 +22,7 @@ async function generateSitemap() {
 ${pages.map(addPage).join('\n')}
 </urlset>`
 
-  await fs.writeFile('path/to/file', 'file contents');
+  await fs.writeFile('public/sitemap.xml', sitemap);
 }
 
 generateSitemap()
