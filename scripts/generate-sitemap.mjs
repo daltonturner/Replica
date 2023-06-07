@@ -1,5 +1,5 @@
-const fs = require('fs')
-const globby = require('globby')
+import fs from 'fs/promises';
+import globby from 'globby';
 
 function addPage(page) {
   const path = page.replace('pages', '').replace('.js', '').replace('.mdx', '')
@@ -22,7 +22,7 @@ async function generateSitemap() {
 ${pages.map(addPage).join('\n')}
 </urlset>`
 
-  fs.writeFileSync('public/sitemap.xml', sitemap)
+  await fs.writeFile('path/to/file', 'file contents');
 }
 
 generateSitemap()
